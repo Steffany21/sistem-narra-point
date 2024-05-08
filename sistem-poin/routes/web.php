@@ -25,7 +25,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 Route::get('/data-master', [DataMasterController::class, 'index']);
 Route::get('/add-master', [DataMasterController::class, 'add']);
 Route::post('/add-master', [DataMasterController::class, 'store']);
-Route::get('/data-master-edit/{$id}', [DataMasterController::class, 'edit']);
+Route::get('/edit-master', [DataMasterController::class, 'edit']);
 
 
 Route::get('/transaction', [TransactionController::class, 'index']);

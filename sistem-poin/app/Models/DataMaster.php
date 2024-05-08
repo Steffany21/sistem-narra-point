@@ -17,4 +17,5 @@ class DataMaster extends Model
         'gender',
         'total_point'
     ];
+    public $timestamps = false;
 }

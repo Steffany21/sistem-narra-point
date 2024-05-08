@@ -12,16 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('data_masters', function (Blueprint $table) {
-            $table->id(); 
             $table->string('customer_name');
             $table->string('phone_number');
+            $table->unique('phone_number');
             $table->string('address');
             $table->string('gender');
-            $table->integer('total_point')->NULL;
-            $table->timestamps();
+            $table->string('total_point');
         });
     }
-
     /**
      * Reverse the migrations.
      */
