@@ -6,6 +6,7 @@ use App\Http\Controllers\reportController;
 use App\Http\Controllers\sessionController;
 use App\Http\Controllers\employeeController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\membershipController;
 use App\Http\Controllers\transactionController;
 
 Route::get('/', function () {

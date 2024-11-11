@@ -126,9 +126,20 @@ class adminController extends Controller
        return redirect()->to('data_master')->with('success', 'Delete Data Successfully');
     }
 
-    public function membershipTiers()
+    public function membershipTiers(Request $request)
     {
-        $customers = dataMaster::all();
-        return view('membership.level', compact('customers'));
+        $keyword = $request->keyword;
+        $numberrow = 8;
+
+        if(strlen($keyword)){
+            $customers = dataMaster::where('customer_name', 'like', "%$keyword%")
+                ->paginate($numberrow);
+        } else {
+            $customers = dataMaster::orderBy('customer_name', 'desc')->paginate($numberrow);
+        }
+            return view('membership.level')->with('customers', $customers);
+
+        // $customers = dataMaster::all();
+        // return view('membership.level', compact('customers'));
     }
 }

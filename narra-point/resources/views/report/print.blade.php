@@ -6,20 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <style>
+        .report-header {
+            text-align: center;
+        }
+
+        .company-info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        img {
+            border-radius: 100%;
+        }
+
         table.static{
             position: relative;
             border: 1px solid black;
         }
     </style>
-    <title>PRINT NARA POINT REPORT</title>
 </head>
 
 <body>
-    <div class="form-group">
-        <p align="center"><b>Nara Point Report</b></p>
+    <div class="company-info" style="display: flex; align-items: center;">
+        <img src="/storage/logo.jpg" alt="Logo" style="float: left; margin right: 20px; width: 100px;">
+        <p>
+            <strong>Narra Farma</strong><br>
+            Ruko Aku Tahu blok ee no. 10-11, Sungai Panas, Batam Kota, Kepulauan Riau 29444<br>
+            Telp: 0851-0505-7766
+        </p>
+    </div>
+
+    <div class="form-group" style="border-top: 1.5px solid black;">
+       <h3 style="text-align: center">Report Data Narra Farma Point</h3>
         <table class="static" align="center" rules="all" border="1px" style="width: 95%;">
             <tr>
-                <th>no</th>
+                <th>No</th>
                 <th>Date</th>
                 <th>Number Phone</th>
                 <th>Customer Name</th>
