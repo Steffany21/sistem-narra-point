@@ -25,7 +25,7 @@
                 <tr>
                     <td>{{ $i + 1 }}</td>
                     <td>{{ $customer->customer_name}}</td>
-                    <td>{{ $customer->getMembershipLevel($customer->point)}}</td>
+                    <td>{{ $customer->membership_level}}</td>
                     {{-- <td>{{ $customer->point}}</td> --}}
                 </tr>
             @endforeach
